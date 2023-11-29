@@ -1,8 +1,9 @@
 const httpStatus = require("http-status");
-const jwt = require("jsonwebtoken");
+const moment = require("moment");
 
 const catchAsync = require("../utils/catchAsyncError");
 const ApiError = require("../utils/ApiError");
+const { TokenService } = require("../services");
 const { User } = require("../models");
 
 const register = catchAsync(async (req, res, next) => {
@@ -20,21 +21,29 @@ const register = catchAsync(async (req, res, next) => {
 
 const login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
+
   if (!email || !password) {
     throw new ApiError(
       httpStatus.NOT_ACCEPTABLE,
       "Please provide email and password!"
     );
   }
-  const user = await User.findOne({ email: email });
+  // const user = await User.findOne({ email: email });
+  const user = await User.findOne({ email }).select("+password");
 
   if (!user) {
-    throw new ApiError(httpStatus.NOT_FOUND, "User not existed!");
+    throw new ApiError(httpStatus.NOT_FOUND, "User does not exists!");
   }
+  if (!(await user.comparePassword(password, user.password))) {
+    throw new ApiError(httpStatus.UNAUTHORIZED, "Password does not match!");
+  }
+  const { token, expires } = await TokenService.generateAuthToken(user);
+
   res.status(httpStatus.OK).json({
     status: "success",
-    token: "",
-    data: user,
+    token,
+    expires,
+    // data: user,
   });
 });
 
