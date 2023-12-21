@@ -1,0 +1,13 @@
+ion-row.header {
+  height: 4rem;
+  width: 100%;
+  background-color: #f1f1fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+ion-content {
+  --background: #f1f1fa;
+}

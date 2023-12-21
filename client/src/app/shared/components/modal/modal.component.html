@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="header">
+    <ion-icon name="arrow-back-outline" size="large" routerLink="/transaction"></ion-icon>
+    <h5 style="margin-right: 9.5rem;">Expense</h5>
+  </div>
+
+  <div class="content">
+    <div class="content-part-1">
+      <label class="ion-custom-input-1-label">How much?</label>
+      <input class="ion-custom-input-1" type="number"/>
+    </div>
+    <div class="content-part-2">
+      <input class="ion-custom-input-2" placeholder="Name" />
+      <input class="ion-custom-input-2" placeholder="Category" />
+      <ion-select class="ion-custom-select" placeholder="Account" interface="action-sheet">
+        <ion-select-option class="select-option">{{'HDFC BANK'}}</ion-select-option>
+        <ion-select-option class="select-option">{{'DBS BANK'}}</ion-select-option>
+        <ion-select-option class="select-option">{{'SBI BANK'}}</ion-select-option>
+      </ion-select>
+      <ion-datetime-button class="ion-custom-input-2 ion-justify-content-start" placeholder="Date" datetime="datetime"></ion-datetime-button>
+      <input class="ion-custom-input-2" placeholder="Description" >
+    </div>
+  </div>
+
+  <div class="footer">
+    <ion-button>Continue</ion-button>
+  </div>
+</div>
+
+<ion-modal [keepContentsMounted]="true" #modal>
+  <ng-template>
+    <ion-datetime id="datetime" [showDefaultButtons]="true"></ion-datetime>
+  </ng-template>
+</ion-modal>

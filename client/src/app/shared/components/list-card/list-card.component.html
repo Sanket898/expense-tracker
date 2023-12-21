@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="header">
+    <h5>{{'Today'}}</h5>
+  </div>
+
+  <div class="content" *ngFor="let item of items">
+    <div class="card">
+      <div class="thumbnail" [style.background]="item.color">
+        <img [src]=item.src>
+      </div>
+      <div class="info">
+        <h6>{{'Shopping'}}</h6>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ab delectus at, magni tempora autem vel omnis quod unde id illum corrupti temporibus consectetur facilis perspiciatis rerum eos velit quaerat!</p>
+      </div>
+      <div class="amount">
+        <h6>{{'$ 250'}}</h6>
+        <p>{{'10:00 AM'}}</p>
+      </div>
+    </div>
+  </div>
+</div>
