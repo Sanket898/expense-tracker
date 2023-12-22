@@ -1,17 +1,26 @@
 <ion-header [translucent]="true">
   <ion-grid>
     <ion-row class="header">
-      <ion-col class="ion-text-start">
-
+      <ion-col class="ion-text-start ion-align-items-center" style="height: 100%;">
+        <img src="../../../assets/icons/05.png" class="profile-img">
       </ion-col>
-      <ion-col>
-        <ion-select placeholder="October"></ion-select>
+      <ion-col class="ion-justify-content-center" style="padding: 0.5rem 1rem 0.5rem 0.5rem;">
+        <ion-select placeholder="October" class="range-select"></ion-select>
       </ion-col>
       <ion-col class="ion-text-end">
-        <ion-icon src="../../../assets/icons/notifiaction.svg" size="large"></ion-icon>
+        <ion-icon src="../../../assets/icons/notifiaction.svg" style="font-size: 20px;"></ion-icon>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-header>
 
-<ion-content [fullscreen]="true"> </ion-content>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-text>Account Balance</ion-text>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-text>$9400</ion-text>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -7,7 +7,18 @@ ion-row.header {
   align-items: center;
   padding: 0.5rem 1rem;
 }
-
+ion-select.range-select {
+  color: #212325;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 40px;
+  border: 1px solid #F1F1FA;
+}
 ion-content {
   --background: #f1f1fa;
+}
+.profile-img{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
 }
