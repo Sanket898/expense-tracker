@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list-card',
@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ListCardComponent {
 
   constructor() { }
+
+  @Input()transactions: any;
+  @Input() title: string = '';
+  @Input() showButton: boolean = false;
 
   items = [
     { data: 2, src: '../../../../assets/icons/cards/shopping bag.svg', color:'#FCEED4'},

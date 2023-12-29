@@ -1,11 +1,12 @@
+import { SharedModule } from '../../shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab1Page } from './tab1.page';
+import { HomePage } from './home.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
-import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { HomePageRoutingModule } from './home-routing.module';
 
 @NgModule({
   imports: [
@@ -13,8 +14,9 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    HomePageRoutingModule,
+    SharedModule
   ],
-  declarations: [Tab1Page]
+  declarations: [HomePage]
 })
-export class Tab1PageModule {}
+export class HomePageModule {}

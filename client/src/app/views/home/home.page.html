@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-grid>
+    <ion-row class="header">
+      <ion-col>
+        <img src="../../../assets/icons/05.png">
+      </ion-col>
+      <ion-col>
+        <ion-select placeholder="October" class="range-select" interface="action-sheet"></ion-select>
+      </ion-col>
+      <ion-col>
+        <ion-icon src="../../../assets/icons/notifiaction.svg" style="font-size: 25px;"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- BALANCE -->
+    <ion-row class="account-balance-row">
+      <ion-text>Account Balance</ion-text>
+      <ion-text>$9400</ion-text>
+    </ion-row>
+    <!-- INCOME EXPENSE BUTTONS -->
+    <ion-row class="income-expense-btns-row">
+      <ion-col>
+        <div>
+          <ion-icon src="../../../assets/icons/income.svg" size="large"></ion-icon>
+        </div>
+        <div>
+          <p>Income</p>
+          <p>{{'$5000'}}</p>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-icon src="../../../assets/icons/expense.svg" size="large"></ion-icon>
+        </div>
+        <div>
+          <p>Expense</p>
+          <p>{{'$1500'}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- CHART -->
+    <ion-row class="chart-row">
+      <ion-text>Spend Frequency</ion-text>
+      <ion-item>
+        <img src="../../../assets/icons/Graph.svg" style="width: 100%;">
+      </ion-item>
+    </ion-row>
+    <!-- TABS -->
+    <ion-row class="content-card-row">
+      <ion-button>Today</ion-button>
+      <ion-button>Week</ion-button>
+      <ion-button>Month</ion-button>
+      <ion-button>Year</ion-button>
+    </ion-row>
+    <!-- CARD -->
+    <app-list-card [transactions]="transactions" title="Recent Transaction" [showButton]="true"></app-list-card>
+  </ion-grid>
+</ion-content>

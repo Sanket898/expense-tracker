@@ -1,19 +1,32 @@
-h6,
-h5,
-p {
-  margin: 0;
-}
 .container {
   width: 100%;
 }
 
 .header {
   width: 100%;
-  height: 3rem;
-  color: #0d0e0f;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  & h5 {
+    color: #0d0e0f;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  & ion-button {
+    // See All
+    color: #7f3dff;
+    font-size: 14px;
+    font-weight: 500;
+    --background: #eee5ff;
+    --border-radius: 40px;
+    --box-shadow: none;
+    --border-style: 1px solid;
+    --padding-top: 0.5rem;
+    --padding-bottom: 0.5rem;
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+  }
 }
 
 .card {
@@ -21,12 +34,11 @@ p {
   height: 5.4rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 24px;
   padding: 1rem;
 
   & .thumbnail {
-    width: 15%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,24 +70,24 @@ p {
       text-overflow: ellipsis;
     }
   }
+
   & .amount {
     width: 25%;
-    height: 100%;
     display: block;
     padding: 6px 0px;
     text-align: end;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     & h6 {
       color: #fd3c4a;
       font-size: 16px;
       font-weight: 600;
-      word-wrap: break-word;
-      margin-bottom: 0.5rem;
     }
     & p {
       color: #91919f;
       font-size: 13px;
       font-weight: 500;
-      word-wrap: break-word;
     }
   }
 }

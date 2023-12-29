@@ -1,22 +1,23 @@
-<ion-header class="ion-justify-content-between ion-align-items-center ion-padding">
-  <ion-select class="transaction-range-select" interface="action-sheet" placeholder="Month">
+<ion-header>
+  <ion-select interface="action-sheet" placeholder="Month">
     <ion-select-option>Day</ion-select-option>
     <ion-select-option>Week</ion-select-option>
     <ion-select-option>Month</ion-select-option>
     <ion-select-option>Year</ion-select-option>
   </ion-select>
-
-  <ion-icon name="filter-outline"style="color: #0d0e0f;" id="filter-modal" class="open-modal-icon"></ion-icon>
+  <ion-icon name="filter-outline" id="filter-modal"></ion-icon>
 </ion-header>
 
 <ion-content>
   <div class="report">
     <div class="report-btn">
       <p>See your financial report</p>
-     <ion-icon name="chevron-forward-outline"></ion-icon>
+      <ion-icon name="chevron-forward-outline" style="font-size: 20px;"></ion-icon>
     </div>
   </div>
-  <app-list-card *ngFor="let i of arr"></app-list-card>
+  <div style="padding: 0.5rem 1rem;">
+    <app-list-card *ngFor="let i of arr" [transactions]="transactions" title="Today"></app-list-card>
+  </div>
 </ion-content>
 
 <ion-modal #modal trigger="filter-modal" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.25, 0.5, 0.90]" >

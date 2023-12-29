@@ -25,24 +25,64 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-ion-grid,
-ion-col {
+@mixin default-styles {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
-ion-header {
-  box-shadow: none !important;
-}
-ion-button {
-  margin: 0 !important;
-}
+
 body,
 * {
   font-family: "Poppins", sans-serif !important;
+  // @include default-styles();
 }
-h6 {
-  margin: 0 !important;
+
+ion-grid,
+ion-row,
+ion-col {
+  @include default-styles();
+  width: 100%;
 }
-ion-row{
-  width: 100% !important;
+
+ion-select {
+  @include default-styles();
+   --highlight-color-focused: none !important;
+}
+
+.alert-wrapper ion-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-header {
+  width: 100%;
+  box-shadow: none !important;
+  background-color: #fcfcfc;
+}
+
+ion-content {
+  width: 100%;
+  --background: #fcfcfc;
+}
+
+ion-button {
+  @include default-styles();
+}
+
+h6,
+h5,
+p,
+img {
+  @include default-styles();
+}
+
+ion-item {
+  --border-style: none !important;
+  --background: transparent;
+  --inner-padding-end: 0px;
+}
+
+ion-item::part(native) {
+  padding: 0;
 }

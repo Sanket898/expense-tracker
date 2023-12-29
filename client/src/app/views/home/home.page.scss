@@ -1,0 +1,162 @@
+ion-content {
+  --background: #f1f1fa;
+  --padding-top: 1rem;
+  --padding-bottom: 1rem;
+  --padding-start: 1rem;
+  --padding-end: 1rem;
+}
+
+// ------------------HEADER---------------------
+ion-row.header {
+  width: 100%;
+  background-color: #f1f1fa;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+
+  & ion-col {
+    height: 40px;
+    align-content: center;
+  }
+
+  & ion-col:first-child {
+    width: 100%;
+    justify-content: start;
+    & img {
+      width: 30%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  & ion-col:nth-child(2) {
+    display: flex;
+    justify-content: center;
+
+    & ion-select {
+      // width: 80%;
+      color: #212325;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 40px;
+      border: 1px solid #f1f1fa;
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  & ion-col:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+ion-select::part(container) {
+  margin: 0 auto;
+}
+
+// ---------------------CONTENT--------------------
+.account-balance-row {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  margin-bottom: 1rem;
+  & ion-text:first-child {
+    // Account Balance
+    color: #91919f;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  & ion-text:last-child {
+    // $9400
+    color: #161719;
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+
+.income-expense-btns-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 7.6%;
+  margin-bottom: 1rem;
+  & ion-col {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #00a86b;
+    padding: 1rem;
+    border-radius: 28px;
+    & div:first-child {
+      height: 100%;
+      padding: 0.5rem;
+      background: #fcfcfc;
+      border-radius: 16px;
+    }
+    & div:last-child {
+      background: transparent;
+      display: block;
+      color: #fcfcfc;
+
+      & p:first-child {
+        // Income
+        font-size: 14px;
+        font-weight: 500;
+      }
+      & p:last-child {
+        // $4500
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  & ion-col:last-child {
+    background: #fd3c4a;
+  }
+}
+
+.chart-row {
+  & ion-text {
+    // Spend Frequency
+    color: #0d0e0f;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.content-card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  & ion-button {
+    --background: transparent;
+    --border-radius: 16px;
+    --border-style: none;
+    --box-shadow: none;
+    --color: #91919f;
+    --padding-start: 1.5rem;
+    --padding-end: 1.5rem;
+    --padding-top: 0.5rem;
+    --padding-bottom: 0.5rem;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  // & ion-button:first-child {
+  //   --color: #fcac12;
+  //   font-weight: 700;
+  //   --background: #fceed4;
+  // }
+  & ion-button:focus {
+    --color: #fcac12;
+    font-weight: 700;
+    --background: #fceed4;
+  }
+}
