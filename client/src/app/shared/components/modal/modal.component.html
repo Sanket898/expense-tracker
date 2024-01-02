@@ -1,50 +1,21 @@
-<!-- <div class="container">
-  <div class="header">
-    <ion-icon name="arrow-back-outline" size="large" routerLink="/transaction"></ion-icon>
-    <h5 style="margin-right: 9.5rem;">Expense</h5>
-  </div>
-
-  <div class="content">
-    <div class="content-part-1">
-      <label class="ion-custom-input-1-label">How much?</label>
-      <input class="ion-custom-input-1" type="number"/>
-    </div>
-    <div class="content-part-2">
-      <input class="ion-custom-input-2" placeholder="Name" />
-      <input class="ion-custom-input-2" placeholder="Category" />
-      <ion-select class="ion-custom-select" placeholder="Account" interface="action-sheet">
-        <ion-select-option class="select-option">{{'HDFC BANK'}}</ion-select-option>
-        <ion-select-option class="select-option">{{'DBS BANK'}}</ion-select-option>
-        <ion-select-option class="select-option">{{'SBI BANK'}}</ion-select-option>
-      </ion-select>
-      <ion-datetime-button class="ion-custom-input-2 ion-justify-content-start" placeholder="Date" datetime="datetime"></ion-datetime-button>
-      <input class="ion-custom-input-2" placeholder="Description" >
-    </div>
-  </div>
-
-  <div class="footer">
-    <ion-button>Continue</ion-button>
-  </div>
-</div> -->
-
 <div class="header">
   <ion-grid>
     <ion-row>
       <ion-col size="1">
-        <ion-icon name="arrow-back-outline" size="large" routerLink="/transaction"></ion-icon>
+        <ion-icon name="arrow-back-outline" size="large" (click)="dismissModal()"></ion-icon>
       </ion-col>
       <ion-col size="10"> <ion-text>Expense</ion-text></ion-col>
       <ion-col size="1"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-text>How much?</ion-text>
+      <ion-input placeholder="₹"></ion-input>
     </ion-row>
   </ion-grid>
 </div>
 
 <div class="content">
   <ion-grid>
-    <ion-row>
-      <ion-text>How much?</ion-text>
-      <ion-input placeholder="₹"></ion-input>
-    </ion-row>
     <ion-row>
       <ion-input placeholder="Name"></ion-input>
       <ion-input placeholder="Category"></ion-input>
@@ -54,13 +25,13 @@
         <ion-select-option class="select-option">{{'SBI BANK'}}</ion-select-option>
       </ion-select>
       <ion-datetime-button placeholder="Date" datetime="datetime"></ion-datetime-button>
-      <ion-input placeholder="Description"></ion-input>
+      <ion-textarea placeholder="Description"></ion-textarea>
     </ion-row>
   </ion-grid>
 </div>
 
 <div class="footer">
-   <ion-button>Continue</ion-button>
+   <ion-button (click)="dismissModal()">Continue</ion-button>
 </div>
 
 <!-- DATETIME MODAL -->

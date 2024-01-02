@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-transaction',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionPage {
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
 
   arr = [1, 2]
 
@@ -17,6 +18,11 @@ export class TransactionPage {
     { data: 4, src: '../../../../assets/icons/cards/restaurant.svg', color: '#FDD5D7' },
     { data: 3, src: '../../../../assets/icons/cards/salary.svg', color: '#CFFAEA' },
     { data: 3, src: '../../../../assets/icons/cards/car.svg', color: '#BDDCFF' },
-  ]
+  ];
+
+  dismissModal() {
+    // Dismiss the modal by calling the dismiss method on the modal controller
+    this.modalController.dismiss();
+  }
 
 }

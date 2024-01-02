@@ -87,10 +87,14 @@ ion-item::part(native) {
   padding: 0;
 }
 
-ion-input {
+ion-input, ion-textarea {
   --highlight-color-focused: none !important;
 }
 
 // ion-datetime::part(calendar-day today) {
 //   border: #fd3c4a 1px solid !important;
 // }
+
+ion-modal {
+  backdrop-filter: blur(8px);
+}
