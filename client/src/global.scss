@@ -46,7 +46,7 @@ ion-col {
 
 ion-select {
   @include default-styles();
-   --highlight-color-focused: none !important;
+  --highlight-color-focused: none !important;
 }
 
 .alert-wrapper ion-label {
@@ -86,3 +86,11 @@ ion-item {
 ion-item::part(native) {
   padding: 0;
 }
+
+ion-input {
+  --highlight-color-focused: none !important;
+}
+
+// ion-datetime::part(calendar-day today) {
+//   border: #fd3c4a 1px solid !important;
+// }

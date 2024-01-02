@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="header">
     <ion-icon name="arrow-back-outline" size="large" routerLink="/transaction"></ion-icon>
     <h5 style="margin-right: 9.5rem;">Expense</h5>
@@ -25,8 +25,45 @@
   <div class="footer">
     <ion-button>Continue</ion-button>
   </div>
+</div> -->
+
+<div class="header">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        <ion-icon name="arrow-back-outline" size="large" routerLink="/transaction"></ion-icon>
+      </ion-col>
+      <ion-col size="10"> <ion-text>Expense</ion-text></ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
 
+<div class="content">
+  <ion-grid>
+    <ion-row>
+      <ion-text>How much?</ion-text>
+      <ion-input placeholder="₹"></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-input placeholder="Name"></ion-input>
+      <ion-input placeholder="Category"></ion-input>
+      <ion-select placeholder="Account" interface="action-sheet">
+        <ion-select-option class="select-option">{{'HDFC BANK'}}</ion-select-option>
+        <ion-select-option class="select-option">{{'DBS BANK'}}</ion-select-option>
+        <ion-select-option class="select-option">{{'SBI BANK'}}</ion-select-option>
+      </ion-select>
+      <ion-datetime-button placeholder="Date" datetime="datetime"></ion-datetime-button>
+      <ion-input placeholder="Description"></ion-input>
+    </ion-row>
+  </ion-grid>
+</div>
+
+<div class="footer">
+   <ion-button>Continue</ion-button>
+</div>
+
+<!-- DATETIME MODAL -->
 <ion-modal [keepContentsMounted]="true" #modal>
   <ng-template>
     <ion-datetime id="datetime" [showDefaultButtons]="true"></ion-datetime>
