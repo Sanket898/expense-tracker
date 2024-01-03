@@ -1,0 +1,17 @@
+<div class="header" >
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        <ion-icon name="arrow-back-outline" size="large" routerLink="/profile" *ngIf="!isModal"></ion-icon>
+        <ion-icon name="arrow-back-outline" size="large" (click)="dismissModal()" *ngIf="isModal"></ion-icon>
+      </ion-col>
+      <ion-col size="10">
+        <ion-text>{{title}}</ion-text>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon *ngIf="false"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+

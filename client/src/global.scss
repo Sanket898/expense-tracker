@@ -87,7 +87,8 @@ ion-item::part(native) {
   padding: 0;
 }
 
-ion-input, ion-textarea {
+ion-input,
+ion-textarea {
   --highlight-color-focused: none !important;
 }
 
@@ -97,4 +98,11 @@ ion-input, ion-textarea {
 
 ion-modal {
   backdrop-filter: blur(8px);
+}
+
+ion-text {
+  // Currency
+  color: #292b2d;
+  font-size: 16px;
+  font-weight: 500;
 }

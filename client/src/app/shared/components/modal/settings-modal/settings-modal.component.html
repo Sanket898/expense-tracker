@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <app-header [title]="title" [isModal]="true"></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="ion-margin-bottom">
+    <ion-row *ngFor="let option of options; let i = index" (click)="selectedOptionIndex = i">
+      <ion-text>{{option}}</ion-text>
+      <ion-text>
+        {{option?.defaultOption}}
+       <ion-icon name="checkmark-circle" [style.display]="selectedOptionIndex === i ? 'block' : 'none'"></ion-icon>
+      </ion-text>
+    </ion-row>
+  </ion-grid>
+</ion-content>

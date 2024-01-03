@@ -1,0 +1,22 @@
+ion-content {
+  & ion-row {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50/16rem;
+  }
+
+  & ion-text:first-child {
+    // Light
+    color: #0d0e0f;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  & ion-text:last-child {
+    font-size: 18px;
+    color: #5233ff;
+  }
+}

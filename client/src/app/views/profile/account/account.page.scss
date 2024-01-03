@@ -1,0 +1,83 @@
+ion-content {
+  & ion-row:first-child {
+    width: 100%;
+    height: 300px;
+    background-image: url("../../../../assets/images/BG.svg");
+    /* Ensure the image covers the entire div */
+    background-size: contain;
+    /* Prevent the background image from repeating */
+    background-repeat: no-repeat;
+    /* Center the background image */
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  & ion-text:first-child {
+    // Account Balance
+    color: #91919f;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  & ion-text:last-child {
+    // $9400
+    color: #161719;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  & ion-row.account {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & ion-col:first-child {
+      display: flex;
+      place-content: center;
+      padding: 1rem;
+      background-color: #f1f1fa;
+      border-radius: 1rem;
+      & ion-icon {
+        font-size: 1.5rem;
+      }
+    }
+    & ion-col:nth-child(2) {
+      padding-left: 1rem;
+      // Wallet
+      & ion-text {
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+    & ion-col:last-child {
+      // Wallet
+      text-align: end;
+      & ion-text {
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+ion-footer {
+  padding: 1rem;
+  background-color: #fcfcfc;
+  box-shadow: none;
+  & ion-button {
+    width: 100%;
+    --background: #7f3dff;
+    --border-radius: 16px;
+    --padding-top: 1rem;
+    --padding-bottom: 1rem;
+    // + Add new wallet
+    color: #fcfcfc;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,28 @@
+.header {
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.04) inset;
+
+  & ion-row:first-child {
+    //BACK ICON
+    & ion-col:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      color: #212325;
+      font-size: 20px;
+    }
+    //TITLE
+    ion-col:nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & ion-text {
+        // Expense
+        color: #212325;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}
