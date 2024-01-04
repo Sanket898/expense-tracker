@@ -1,0 +1,31 @@
+ion-grid {
+  & ion-row:first-child {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    & ion-text:first-child {
+      // Logout?
+      color: black;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    & ion-text:last-child {
+      // Are you sure do you wanna logout?
+      color: #91919f;
+      font-size: 1rem;
+    }
+  }
+  //BUTTONS
+  & ion-row:last-child {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    & ion-button:first-child {
+      --background: #eee5ff;
+      color: #7f3dff;
+    }
+  }
+}

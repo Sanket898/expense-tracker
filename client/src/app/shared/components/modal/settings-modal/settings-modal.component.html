@@ -3,13 +3,37 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-grid class="ion-margin-bottom">
-    <ion-row *ngFor="let option of options; let i = index" (click)="selectedOptionIndex = i">
+  <ion-grid *ngIf="!isNotificationPageFlag">
+    <ion-row *ngFor="let option of options; let i = index" (click)="selectedOptionIndex = i" class="settings-options-row">
       <ion-text>{{option}}</ion-text>
       <ion-text>
         {{option?.defaultOption}}
-       <ion-icon name="checkmark-circle" [style.display]="selectedOptionIndex === i ? 'block' : 'none'"></ion-icon>
+        <ion-icon name="checkmark-circle" [style.display]="selectedOptionIndex === i ? 'block' : 'none'"></ion-icon>
       </ion-text>
+    </ion-row>
+  </ion-grid>
+
+  <!-- NOTIFICATION OPTIONS GRID-->
+  <ion-grid *ngIf="isNotificationPageFlag">
+    <ion-row class="notification-options">
+      <ion-col size="7">
+        <ion-text>Expense Alert</ion-text>
+        <ion-text>Get notification about you’re expense</ion-text>
+      </ion-col>
+      <ion-col size="2">
+        <ion-toggle></ion-toggle>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="true" class="notification-options">
+      <ion-col size="7">
+        <ion-text>Budget</ion-text>
+        <ion-text>
+          Get notification when you’re budget exceeding the limit
+        </ion-text>
+      </ion-col>
+      <ion-col size="2">
+        <ion-toggle></ion-toggle>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -61,13 +61,23 @@ ion-header {
   background-color: #fcfcfc;
 }
 
+/*--------------- ION-CONTENT ----------------*/
 ion-content {
   width: 100%;
   --background: #fcfcfc;
 }
 
+/*--------------- ION-BUTTON ----------------*/
 ion-button {
   @include default-styles();
+  width: 100%;
+  --background: #7f3dff;
+  --border-radius: 16px;
+  --padding-top: 1rem;
+  --padding-bottom: 1rem;
+  color: #fcfcfc;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 h6,
@@ -77,6 +87,7 @@ img {
   @include default-styles();
 }
 
+/*--------------- ION-ITEM ----------------*/
 ion-item {
   --border-style: none !important;
   --background: transparent;
@@ -87,6 +98,7 @@ ion-item::part(native) {
   padding: 0;
 }
 
+/*--------------- ION-INPUTS ----------------*/
 ion-input,
 ion-textarea {
   --highlight-color-focused: none !important;
@@ -96,13 +108,43 @@ ion-textarea {
 //   border: #fd3c4a 1px solid !important;
 // }
 
+/*--------------- ION-MODAL ----------------*/
 ion-modal {
+  // padding: 1rem;
+  --background: white;
   backdrop-filter: blur(8px);
+  --border-radius: 24px;
 }
 
+ion-modal::part(handle) {
+  background: #eee5ff !important;
+}
+
+/*--------------- ION-TEXT ----------------*/
 ion-text {
   // Currency
   color: #292b2d;
   font-size: 16px;
   font-weight: 500;
+}
+
+/*--------------- ION-TOGGLE ----------------*/
+ion-toggle::part(track) {
+  width: 3rem;
+  height: 1.5rem;
+  background: #eee5ff;
+}
+
+ion-toggle.toggle-checked::part(track) {
+  background: #7f3dff;
+}
+
+ion-toggle::part(handle) {
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #fcfcfc;
+}
+
+ion-toggle.toggle-checked::part(handle) {
+  background: #fcfcfc;
 }

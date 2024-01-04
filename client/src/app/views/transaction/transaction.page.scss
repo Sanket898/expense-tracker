@@ -55,11 +55,4 @@ ion-select::part(icon) {
 ion-select::part(container) {
   margin: 0 auto;
 }
-ion-modal {
-  padding: 1rem;
-  --border-radius: 24px;
-}
 
-ion-modal::part(handle) {
-  background: #eee5ff;
-}

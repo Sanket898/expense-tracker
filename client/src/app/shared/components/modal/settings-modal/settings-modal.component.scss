@@ -1,5 +1,5 @@
 ion-content {
-  & ion-row {
+  & ion-row.settings-options-row {
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -10,13 +10,42 @@ ion-content {
   & ion-text:first-child {
     // Light
     color: #0d0e0f;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 1.5rem;
   }
 
+  // CHECKBOX
   & ion-text:last-child {
-    font-size: 18px;
+    font-size: 1.5rem;
     color: #5233ff;
+  }
+
+  ion-row.notification-options {
+    padding: 0.625rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    & ion-col:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      & ion-text:first-child {
+        // Expense Alert
+        color: #292b2d;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      & ion-text:last-child {
+        // Get notification about you’re
+        color: #91919f;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+    & ion-col:last-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

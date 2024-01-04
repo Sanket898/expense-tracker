@@ -12,9 +12,11 @@ export class SettingsPage {
   constructor(private modalController: ModalController) { }
 
   async openModal(option: any) {
+    let isNotificationPage = option?.label == 'Notification' ? true : false;
     const dataToSend = {
       title: option?.label,
       options: option?.options,
+      isNotificationPageFlag: isNotificationPage
     };
     const settingsModal = await this.modalController.create({
       component: SettingsModalComponent,

@@ -17,8 +17,8 @@
 
 <ion-content>
   <ion-grid>
-    <ion-row *ngFor="let item of menuItems" [routerLink]="item?.path">
-      <ion-col size="2">
+    <ion-row *ngFor="let item of menuItems" [routerLink]="item?.path" (click)="profileActions(item)">
+      <ion-col size="2" [style.background]="item?.background">
         <ion-icon [src]="item?.src"></ion-icon>
       </ion-col>
       <ion-col size="8">

@@ -7,11 +7,21 @@ import { FilterSortModalComponent } from './components/filter-sort-modal/filter-
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { SettingsModalComponent } from './components/modal/settings-modal/settings-modal.component';
+import { LogoutComponent } from './components/modal/logout/logout.component';
+
+let components = [
+  ModalComponent,
+  ListCardComponent,
+  FilterSortModalComponent,
+  HeaderComponent,
+  SettingsModalComponent,
+  LogoutComponent
+]
 
 @NgModule({
-  declarations: [ModalComponent, ListCardComponent, FilterSortModalComponent, HeaderComponent, SettingsModalComponent],
+  declarations: [...components],
   imports: [IonicModule, CommonModule, RouterModule],
-  exports: [CommonModule, ModalComponent, ListCardComponent, FilterSortModalComponent, HeaderComponent, SettingsModalComponent]
+  exports: [CommonModule, ...components]
 })
 
 export class SharedModule { }

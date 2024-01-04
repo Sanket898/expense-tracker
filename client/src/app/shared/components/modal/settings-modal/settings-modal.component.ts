@@ -10,6 +10,7 @@ export class SettingsModalComponent {
 
   @Input() options!: Array<any>;
   @Input() title!: string;
+  @Input() isNotificationPageFlag!: boolean;
 
   receivedData: any;
   selectedOptionIndex!: number;
@@ -18,11 +19,7 @@ export class SettingsModalComponent {
     this.receivedData = this.navParams.get('data');
     this.title = this.receivedData?.title;
     this.options = this.receivedData?.options;
+    this.isNotificationPageFlag = this.receivedData?.isNotificationPageFlag;
   }
-
-  closeSecondModal() {
-    this.modalController.dismiss();
-  }
-
 
 }
