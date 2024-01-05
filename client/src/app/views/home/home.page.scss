@@ -61,7 +61,7 @@ ion-select::part(container) {
   margin: 0 auto;
 }
 
-// ---------------------CONTENT--------------------
+    // <!-- BALANCE -->
 .account-balance-row {
   display: flex;
   flex-direction: column;
@@ -81,36 +81,41 @@ ion-select::part(container) {
   }
 }
 
+  //  <!-- INCOME EXPENSE BUTTONS -->
 .income-expense-btns-row {
   display: flex;
   justify-content: space-between;
-  gap: 7.6%;
-  margin-bottom: 1rem;
-  & ion-col {
+  padding: 1rem 0;
+  & ion-col.temp {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
     background-color: #00a86b;
     padding: 1rem;
     border-radius: 28px;
-    & div:first-child {
+    & ion-col:first-child {
       height: 100%;
+      display: flex;
+      place-content: center;
       padding: 0.5rem;
       background: #fcfcfc;
       border-radius: 16px;
     }
-    & div:last-child {
+    & ion-col:last-child {
       background: transparent;
-      display: block;
+      display: flex;
+      flex-direction: column;
       color: #fcfcfc;
 
-      & p:first-child {
+      & ion-text:first-child {
         // Income
+        color: #fcfcfc;
         font-size: 14px;
         font-weight: 500;
       }
-      & p:last-child {
+      & ion-text:last-child {
         // $4500
+        color: #fcfcfc;
         font-size: 22px;
         font-weight: 600;
       }
@@ -122,6 +127,7 @@ ion-select::part(container) {
   }
 }
 
+  // <!-- CHART -->
 .chart-row {
   & ion-text {
     // Spend Frequency
@@ -131,31 +137,29 @@ ion-select::part(container) {
   }
 }
 
+// <!-- TABS -->
 .content-card-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
   & ion-button {
     --background: transparent;
-    --border-radius: 16px;
     --border-style: none;
-    --box-shadow: none;
-    --color: #91919f;
     --padding-start: 1.5rem;
     --padding-end: 1.5rem;
     --padding-top: 0.5rem;
     --padding-bottom: 0.5rem;
+    color: #91919f;
     font-size: 14px;
+    line-height: 18px;
     font-weight: 500;
   }
 
-  // & ion-button:first-child {
-  //   --color: #fcac12;
+  // .default-selected-btn {
+  //   color: #fcac12;
   //   font-weight: 700;
   //   --background: #fceed4;
   // }
+
   & ion-button:focus {
-    --color: #fcac12;
+    color: #fcac12;
     font-weight: 700;
     --background: #fceed4;
   }

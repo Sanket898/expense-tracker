@@ -72,9 +72,10 @@ ion-button {
   @include default-styles();
   width: 100%;
   --background: #7f3dff;
-  --border-radius: 16px;
+  --border-radius: 1rem;
   --padding-top: 1rem;
   --padding-bottom: 1rem;
+  --box-shadow: none;
   color: #fcfcfc;
   font-size: 1.125rem;
   font-weight: 600;
@@ -124,7 +125,7 @@ ion-modal::part(handle) {
 ion-text {
   // Currency
   color: #292b2d;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 

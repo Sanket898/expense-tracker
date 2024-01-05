@@ -1,14 +1,11 @@
-.container {
-  width: 100%;
-}
-
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  & h5 {
+  & ion-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  & ion-text {
     color: #0d0e0f;
     font-size: 1.1rem;
     font-weight: 600;
@@ -20,8 +17,6 @@
     font-weight: 500;
     --background: #eee5ff;
     --border-radius: 40px;
-    --box-shadow: none;
-    --border-style: 1px solid;
     --padding-top: 0.5rem;
     --padding-bottom: 0.5rem;
     --padding-start: 1rem;
@@ -29,68 +24,56 @@
   }
 }
 
-.card {
-  width: 100%;
-  height: 5.4rem;
-  gap: 1.5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 24px;
-  padding: 1rem;
-
-  & .thumbnail {
-    width: 50px;
-    height: 50px;
+.content {
+  & ion-row {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    padding: 0.625rem;
-  }
+    border-radius: 24px;
+    padding: 1rem 0rem;
 
-  & .info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: start;
-    padding: 6px 0px;
-    & h6 {
-      width: 100%;
-      color: #292b2d;
-      font-size: 1rem;
-      font-weight: 500;
+    & ion-col.thumbnail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      padding: 0.625rem;
     }
-    & p {
-      width: 100%;
-      display: inline-block;
-      color: #91919f;
-      font-size: 0.81rem;
-      font-weight: 500;
-      white-space: nowrap;
-      overflow: hidden !important;
-      text-overflow: ellipsis;
-    }
-  }
 
-  & .amount {
-    width: 25%;
-    display: block;
-    padding: 6px 0px;
-    text-align: end;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    & h6 {
-      color: #fd3c4a;
-      font-size: 16px;
-      font-weight: 600;
+    & ion-col.info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: start;
+      & ion-text:first-child {
+        color: #292b2d;
+      }
+      & ion-text:last-child {
+        display: inline-block;
+        color: #91919f;
+        font-size: 0.81rem;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+      }
     }
-    & p {
-      color: #91919f;
-      font-size: 13px;
-      font-weight: 500;
+
+    & ion-col.amount {
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+      gap: 0.5rem;
+      & ion-text:first-child {
+        color: #fd3c4a;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      & ion-text:last-child {
+        color: #91919f;
+        font-size: 13px;
+        font-weight: 500;
+      }
     }
   }
 }

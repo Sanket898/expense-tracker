@@ -30,32 +30,59 @@
   word-wrap: break-word;
 }
 
-.modal-content {
-  width: 100%;
-  background: #fcfcfc;
-}
-
-//REPORT STYLES
-.report {
-  width: 100%;
-  height: 62px;
-  padding: 0.5rem 1rem;
-  box-sizing: border-box;
-}
-
-.report-btn {
-  background-color: #eee5ff;
-  color: #7f3dff;
-  width: 100%;
-  height: 3rem;
-  box-sizing: border-box;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  font-weight: 400;
+ion-row.filter-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
+  ion-text {
+    // Filter Transaction
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  ion-button {
+    // Reset
+    --background: #eee5ff;
+    --border-radius: 40px;
+    color: #7f3dff;
+    --padding-top: 0.5rem;
+    --padding-bottom: 0.5rem;
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+}
+
+& ion-row.filter-btns {
+  ion-text {
+    // Filter By
+    color: #0d0e0f;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  ion-button {
+    // Income
+    color: #0d0e0f;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    --padding-left: 1.5rem;
+    --padding-right: 1.5rem;
+    --padding-top: 0.75rem;
+    --padding-bottom: 0.75rem;
+    --border-radius: 1.5rem;
+    border: 1px #e3e5e5 solid;
+  }
+}
+
+.modal-content {
+  width: 100%;
+  background: #fcfcfc;
+  padding: 1rem;
 }
 
 //MODAL STYLES
@@ -68,19 +95,11 @@ ion-icon.open-modal-icon {
   border: 1px #f1f1fa solid;
 }
 
-ion-select {
-  --highlight-color-focused: none;
-}
-
-ion-select::part(icon) {
-  color: #7f3dff;
-}
-
 .modal {
   background-color: #fcfcfc;
-  width: 100%;
-  height: 100vh;
-  padding: 1rem;
+  // width: 100%;
+  // height: 100vh;
+  // padding: 1rem;
 }
 
 .modal-header {
@@ -142,15 +161,6 @@ ion-select::part(icon) {
   }
 }
 
-ion-modal {
-  padding: 1rem;
-  --border-radius: 24px;
-}
-
-ion-modal::part(handle) {
-  background: #eee5ff;
-}
-
 ion-text.modal-text-headers {
   @include ion-text-styles();
 }
@@ -159,28 +169,6 @@ ion-text.modal-text-normal {
   @include ion-text-styles();
   font-weight: 500;
 }
-
-ion-row.filter-header {
-  height: 36px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-ion-button.reset-btn {
-  --background: #eee5ff;
-  --color: #7f3dff;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  --border-radius: 40px;
-  margin: 0;
-  height: 32px;
-}
-
 
 ion-button.apply-btn {
   color: #fcfcfc;
@@ -193,7 +181,6 @@ ion-button.apply-btn {
   border-radius: 16px;
   box-shadow: none;
 }
-
 
 .filter-btn {
   @include btn-styles();
@@ -229,4 +216,3 @@ ion-select.transaction-range-select {
   border: 1px #f1f1fa solid;
   border-radius: 40px;
 }
-
