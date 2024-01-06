@@ -13,40 +13,57 @@
   </ion-grid>
 
   <!-- FILTER & SORT -->
-  <ion-grid>
-    <ion-row class="filter-btns">
+  <ion-grid class="filter-btns">
+    <ion-row>
       <ion-text>Filter By</ion-text>
     </ion-row>
     <ion-row>
-      <ion-button>Income</ion-button>
-      <ion-button>Expense</ion-button>
-      <ion-button>Transfer</ion-button>
+      <ion-col>
+        <ion-button>Income</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Expense</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Transfer</ion-button>
+      </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-grid class="ion-margin-bottom">
-    <ion-row class="ion-margin-bottom">
-      <ion-text class="modal-text-headers">Sort By</ion-text>
+  <ion-grid class="filter-btns">
+    <ion-row>
+      <ion-text>Sort By</ion-text>
     </ion-row>
-    <ion-row style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-      <ion-button class="sort-btn">Highest</ion-button>
-      <ion-button class="sort-btn">Lowest</ion-button>
-      <ion-button class="sort-btn">Newest</ion-button>
-      <ion-button class="sort-btn">Oldest</ion-button>
+    <ion-row>
+      <ion-col>
+        <ion-button>Highest</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Lowest</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Newest</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Oldest</ion-button>
+      </ion-col>
+      <!-- To fill remaining space added tow columns -->
+      <ion-col></ion-col>
+      <ion-col></ion-col>
     </ion-row>
   </ion-grid>
 
   <!-- CATEGORY SELECTION -->
-  <ion-grid>
-    <ion-row class="ion-margin-bottom">
-      <ion-text class="modal-text-headers">Category</ion-text>
+  <ion-grid class="category-select">
+    <ion-row>
+      <ion-text>Category</ion-text>
     </ion-row>
-    <ion-row class="ion-align-items-center">
-      <ion-col style="display: flex; justify-content: start;">
-        <ion-text class="modal-text-normal">Choose Category</ion-text>
+    <ion-row>
+      <ion-col size="8">
+        <ion-text>Choose Category</ion-text>
       </ion-col>
-      <ion-col style="display: flex; justify-content: end;">
-        <ion-select placeholder="0 selected" class="modal-select-category" interface="action-sheet">
+      <ion-col size="4">
+        <ion-select placeholder="0 selected" interface="action-sheet">
           <ion-select-option>Category 1</ion-select-option>
           <ion-select-option>Category 2</ion-select-option>
           <ion-select-option>Category 3</ion-select-option>
@@ -54,8 +71,8 @@
       </ion-col>
     </ion-row>
     <!-- FOOTER -->
-    <ion-row class="ion-no-margin">
-      <ion-button class="apply-btn">
+    <ion-row>
+      <ion-button>
         Apply
       </ion-button>
     </ion-row>

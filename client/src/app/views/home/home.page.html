@@ -19,29 +19,29 @@
     <!-- BALANCE -->
     <ion-row class="account-balance-row">
       <ion-text>Account Balance</ion-text>
-      <ion-text>$9400</ion-text>
+      <ion-text>{{9400 | currency:'INR':'symbol':'1.2-2'}}</ion-text>
     </ion-row>
 
     <!-- INCOME EXPENSE BUTTONS -->
     <ion-row class="income-expense-btns-row">
       <!-- Income Button -->
-      <ion-col size="5.5" class="temp">
+      <ion-col size="5.8" class="temp">
         <ion-col size="4.5">
           <ion-img src="../../../assets/icons/income.svg"></ion-img>
         </ion-col>
         <ion-col size="6.5">
           <ion-text>Income</ion-text>
-          <ion-text>{{'$5000' }}</ion-text>
+          <ion-text>{{'5000' }}</ion-text>
         </ion-col>
       </ion-col>
       <!-- Expense Button -->
-      <ion-col size="5.5" class="temp">
+      <ion-col size="5.8" class="temp">
         <ion-col size="4.5">
           <ion-img src="../../../assets/icons/expense.svg"></ion-img>
         </ion-col>
         <ion-col size="6.5">
           <ion-text>Expense</ion-text>
-          <ion-text>{{'$1500'}}</ion-text>
+          <ion-text>{{'1500'}}</ion-text>
         </ion-col>
       </ion-col>
     </ion-row>

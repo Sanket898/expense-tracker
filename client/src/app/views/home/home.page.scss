@@ -65,7 +65,8 @@ ion-select::part(container) {
 .account-balance-row {
   display: flex;
   flex-direction: column;
-  place-content: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
   & ion-text:first-child {
     // Account Balance
