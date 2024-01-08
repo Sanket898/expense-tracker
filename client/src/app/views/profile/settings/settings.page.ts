@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { SettingsModalComponent } from 'src/app/shared/components/modal/settings-modal/settings-modal.component';
+import { SettingsModalComponent } from 'src/app/shared/components/modals/settings-modal/settings-modal.component';
 
 @Component({
   selector: 'app-settings',

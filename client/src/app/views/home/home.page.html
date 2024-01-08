@@ -19,29 +19,33 @@
     <!-- BALANCE -->
     <ion-row class="account-balance-row">
       <ion-text>Account Balance</ion-text>
-      <ion-text>$9400</ion-text>
+      <ion-text>{{9400 | currency:'INR':'symbol':'1.2-2'}}</ion-text>
     </ion-row>
+
     <!-- INCOME EXPENSE BUTTONS -->
     <ion-row class="income-expense-btns-row">
-      <ion-col>
-        <div>
-          <ion-icon src="../../../assets/icons/income.svg" size="large"></ion-icon>
-        </div>
-        <div>
-          <p>Income</p>
-          <p>{{'$5000'}}</p>
-        </div>
+      <!-- Income Button -->
+      <ion-col size="5.8" class="temp">
+        <ion-col size="4.5">
+          <ion-img src="../../../assets/icons/income.svg"></ion-img>
+        </ion-col>
+        <ion-col size="6.5">
+          <ion-text>Income</ion-text>
+          <ion-text>{{'5000' }}</ion-text>
+        </ion-col>
       </ion-col>
-      <ion-col>
-        <div>
-          <ion-icon src="../../../assets/icons/expense.svg" size="large"></ion-icon>
-        </div>
-        <div>
-          <p>Expense</p>
-          <p>{{'$1500'}}</p>
-        </div>
+      <!-- Expense Button -->
+      <ion-col size="5.8" class="temp">
+        <ion-col size="4.5">
+          <ion-img src="../../../assets/icons/expense.svg"></ion-img>
+        </ion-col>
+        <ion-col size="6.5">
+          <ion-text>Expense</ion-text>
+          <ion-text>{{'1500'}}</ion-text>
+        </ion-col>
       </ion-col>
     </ion-row>
+
     <!-- CHART -->
     <ion-row class="chart-row">
       <ion-text>Spend Frequency</ion-text>
@@ -49,12 +53,21 @@
         <img src="../../../assets/icons/Graph.svg" style="width: 100%;">
       </ion-item>
     </ion-row>
+
     <!-- TABS -->
     <ion-row class="content-card-row">
-      <ion-button>Today</ion-button>
-      <ion-button>Week</ion-button>
-      <ion-button>Month</ion-button>
-      <ion-button>Year</ion-button>
+      <ion-col size="3">
+        <ion-button [ariaSelected]="true" class="default-selected-btn">Today</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button>Week</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button>Month</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button>Year</ion-button>
+      </ion-col>
     </ion-row>
     <!-- CARD -->
     <app-list-card [transactions]="transactions" title="Recent Transaction" [showButton]="true"></app-list-card>

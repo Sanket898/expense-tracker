@@ -1,23 +1,34 @@
-<div class="container">
-  <div class="header">
-    <h5>{{title}}</h5>
-    <ion-button *ngIf="showButton">See all</ion-button>
-  </div>
+<div class="header">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-text>
+          {{title}}
+        </ion-text>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button *ngIf="showButton">See all</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 
-  <div class="content" *ngFor="let transaction of transactions">
-    <div class="card">
-      <div class="thumbnail" [style.background]="transaction.color">
-        <img [src]=transaction.src>
-      </div>
-      <div class="info">
-        <h6>{{'Shopping'}}</h6>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ab delectus at, magni tempora autem
-          vel omnis quod unde id illum corrupti temporibus consectetur facilis perspiciatis rerum eos velit quaerat!</p>
-      </div>
-      <div class="amount">
-        <h6>{{'$ 250'}}</h6>
-        <p>{{'10:00 AM'}}</p>
-      </div>
-    </div>
-  </div>
+<div class="content" *ngFor="let transaction of transactions">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="thumbnail" [style.background]="transaction.color" size="2">
+        <ion-img [src]='transaction.src'></ion-img>
+      </ion-col>
+      <ion-col class="info" size="6">
+        <ion-text>{{'Shopping'}}</ion-text>
+        <ion-text>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ab delectus at, magni tempora autem
+          vel omnis quod unde id illum corrupti temporibus consectetur facilis perspiciatis rerum eos velit quaerat!
+        </ion-text>
+        </ion-col>
+        <ion-col class="amount" size="3">
+          <ion-text>{{250 | currency: 'INR'}}</ion-text>
+          <ion-text>{{'10:00 AM'}}</ion-text>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
 </div>

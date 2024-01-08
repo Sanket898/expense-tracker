@@ -1,0 +1,81 @@
+<div class="modal-content">
+
+  <!-- RESET -->
+  <ion-grid>
+    <ion-row class="filter-header">
+      <ion-col size="8">
+        <ion-text>Filter Transaction</ion-text>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button>Reset</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- FILTER & SORT -->
+  <ion-grid class="filter-btns">
+    <ion-row>
+      <ion-text>Filter By</ion-text>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button>Income</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Expense</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Transfer</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="filter-btns">
+    <ion-row>
+      <ion-text>Sort By</ion-text>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button>Highest</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Lowest</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Newest</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button>Oldest</ion-button>
+      </ion-col>
+      <!-- To fill remaining space added tow columns -->
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- CATEGORY SELECTION -->
+  <ion-grid class="category-select">
+    <ion-row>
+      <ion-text>Category</ion-text>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8">
+        <ion-text>Choose Category</ion-text>
+      </ion-col>
+      <ion-col size="4">
+        <ion-select placeholder="0 selected" interface="action-sheet">
+          <ion-select-option>Category 1</ion-select-option>
+          <ion-select-option>Category 2</ion-select-option>
+          <ion-select-option>Category 3</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <!-- FOOTER -->
+    <ion-row>
+      <ion-button>
+        Apply
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+</div>
+

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { LogoutComponent } from 'src/app/shared/components/modal/logout/logout.component';
+import { LogoutComponent } from 'src/app/shared/components/modals/logout/logout.component';
 
 @Component({
   selector: 'app-profile',
