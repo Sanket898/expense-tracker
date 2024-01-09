@@ -1,14 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { HttpService } from 'src/app/shared/services/http.service';
 
 @Component({
   selector: 'app-transaction',
   templateUrl: './transaction.page.html',
   styleUrls: ['./transaction.page.scss'],
 })
-export class TransactionPage {
+export class TransactionPage implements OnInit {
 
-  constructor(private modalController: ModalController) { }
+  constructor(private modalController: ModalController, private http: HttpService) { }
+
+  ngOnInit() {
+    this.getExpenses()
+  }
+
+  getExpenses() {
+    this.http.get('expenses').subscribe({
+      next: (data) => {
+        console.log(data);
+      }, error: (err) => {
+        console.log(err);
+      }
+    })
+  }
 
   arr = [1, 2]
 
@@ -24,5 +39,6 @@ export class TransactionPage {
     // Dismiss the modal by calling the dismiss method on the modal controller
     this.modalController.dismiss();
   }
+
 
 }

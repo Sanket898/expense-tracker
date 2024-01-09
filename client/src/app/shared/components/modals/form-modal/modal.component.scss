@@ -30,7 +30,7 @@ $red-background: #fd3c4a;
     & ion-col:first-child {
       display: flex;
       align-items: center;
-      justify-content: start;
+      justify-content: flex-start;
     }
     //TITLE
     ion-col:nth-child(2) {

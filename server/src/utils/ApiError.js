@@ -1,10 +1,9 @@
 class ApiError extends Error {
-  constructor(statusCode, message, isOperational = true) {
+  constructor(statusCode, message) {
     super(message);
     this.statusCode = statusCode;
-    this.status = statusCode >= 400 && statusCode <= 500 ? "fail" : "error";
-
-    this.isOperational = isOperational;
+    this.isOperational = true;
+    this.status = statusCode >= 400 && statusCode < 500 ? "Fail" : "Error";
 
     Error.captureStackTrace(this, this.constructor);
   }

@@ -1,7 +1,7 @@
 const express = require("express");
 
-const movieRoutes = require("./movie.route");
 const authRoutes = require("./auth.route");
+const expenseRoutes = require("./expense.route");
 
 const router = express.Router();
 
@@ -11,8 +11,8 @@ const appRoutes = [
     route: authRoutes,
   },
   {
-    path: "/movies",
-    route: movieRoutes,
+    path: "/expenses",
+    route: expenseRoutes,
   },
 ];
 

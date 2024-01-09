@@ -1,7 +1,7 @@
 const { Expense } = require("../models");
 
 const createExpense = (expenseBody) => {
-  const expense = Expense.create(req.body);
+  const expense = Expense.create(expenseBody);
   return expense;
 };
 
