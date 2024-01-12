@@ -32,6 +32,7 @@ export class ModalComponent implements OnInit {
       amount: [''],
       date: [new Date],
       description: [''],
+      tags: [''],
     })
   }
 
@@ -40,21 +41,17 @@ export class ModalComponent implements OnInit {
     this.modalController.dismiss();
   }
 
-  createExpense() {
-
-  }
-
   submitForm() {
-    console.log(this.expenseForm.value);
+    // console.log(this.expenseForm.value);
     const formBody = this.expenseForm.value;
 
     this.http.post('expenses', formBody).subscribe({
       next: (data) => {
-        console.log(data);
+
+        this.dismissModal();
       },
       error: (err) => {
         this.toastr.error(err?.error?.message)
-        console.log(err.error.message);
       }
     });
   }

@@ -21,9 +21,15 @@
         <ion-input placeholder="Name" formControlName="name"></ion-input>
         <ion-input placeholder="Category" formControlName="category"></ion-input>
         <ion-select placeholder="Account" interface="action-sheet" formControlName="account">
-          <ion-select-option class="select-option" value="HDFC">{{'HDFC BANK'}}</ion-select-option>
-          <ion-select-option class="select-option" value="DBS">{{'DBS BANK'}}</ion-select-option>
-          <ion-select-option class="select-option" value="SBI">{{'SBI BANK'}}</ion-select-option>
+          <ion-select-option value="HDFC">{{'HDFC BANK'}}</ion-select-option>
+          <ion-select-option value="DBS">{{'DBS BANK'}}</ion-select-option>
+          <ion-select-option value="SBI">{{'SBI BANK'}}</ion-select-option>
+        </ion-select>
+        <ion-select placeholder="Tags" interface="action-sheet" formControlName="tags" multiple="true">
+          <ion-select-option value="chai">{{'Chai'}}</ion-select-option>
+          <ion-select-option value="fuel">{{'Fuel'}}</ion-select-option>
+          <ion-select-option value="outdoor-food">{{'Outdoor Food'}}</ion-select-option>
+          <ion-select-option value="investment">{{'Investment'}}</ion-select-option>
         </ion-select>
         <!-- <ion-datetime formControlName="date"> -->
           <ion-datetime-button placeholder="Date" datetime="datetime"></ion-datetime-button>

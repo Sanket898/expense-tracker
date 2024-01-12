@@ -18,6 +18,7 @@ export class TransactionPage implements OnInit {
   getExpenses() {
     this.http.get('expenses').subscribe({
       next: (data) => {
+        // this.transactions = data
         console.log(data);
       }, error: (err) => {
         console.log(err);
